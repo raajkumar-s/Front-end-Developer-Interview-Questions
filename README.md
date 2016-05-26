@@ -101,7 +101,12 @@ This file contains a number of front-end interview questions that can be used wh
 #### JS Questions:
 
 * Explain event delegation
+  * Event Bubbling - Child to Parent
+  * Event Capture - Parent to Child
+  * [More Info](#https://davidwalsh.name/event-delegate)
 * Explain how `this` works in JavaScript
+  * `this` refers to the context of the current execution
+  * 
 * Explain how prototypal inheritance works
 * What do you think of AMD vs CommonJS?
 * Explain why the following doesn't work as an IIFE: `function foo(){ }();`.
@@ -113,9 +118,20 @@ This file contains a number of front-end interview questions that can be used wh
 * How do you organize your code? (module pattern, classical inheritance?)
 * What's the difference between host objects and native objects?
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
+  *  #### Answers:
+  *  `function Person(){}` - Declares a constructor function
+  *  `var person = Person()` - Calls the function, as a normal function and not as a constructor
+  *  `var person = new Person()` - Calls the constructor function and returns a new instance of `Person` object.
 * What's the difference between `.call` and `.apply`?
+  *  #### Answers:
+  * `call` takes mutiple arguments
+  * `apply` takes a single array which contains all the arguments 
 * Explain `Function.prototype.bind`.
+  *  #### Answer:
+  * Unlike `call` and `apply`, `bind` doesn't call the function immediately. Instead it just bind the `this` with the function and returns a new function so that it can be called later.
 * When would you use `document.write()`?
+  * #### Answer
+  * To overwrite the existing content of the page
 * What's the difference between feature detection, feature inference, and using the UA string?
 * Explain Ajax in as much detail as possible.
 * What are the advantages and disadvantages of using Ajax?
