@@ -103,7 +103,7 @@ This file contains a number of front-end interview questions that can be used wh
 * Explain event delegation
   * Event Bubbling - Child to Parent
   * Event Capture - Parent to Child
-  * [More Info](#https://davidwalsh.name/event-delegate)
+  * [More Info](https://davidwalsh.name/event-delegate)
 * Explain how `this` works in JavaScript
   * `this` refers to the context of the current execution
 * Explain how prototypal inheritance works
@@ -153,11 +153,11 @@ This file contains a number of front-end interview questions that can be used wh
 * Explain "hoisting".
 * Describe event bubbling.
 * What's the difference between an "attribute" and a "property"?
-  * ### Answer [here](#http://stackoverflow.com/a/5884994)
+  * ### Answer [here](http://stackoverflow.com/a/5884994)
 * Why is extending built-in JavaScript objects not a good idea?
 * Difference between document load event and document DOMContentLoaded event?
   * DOMContentLoaded - Fired as soon as the DOM hierarchy has been fully constructed,    * load - Fired when all the images and sub-frames have finished loading.
-  * Demo [here](#http://jsfiddle.net/9L75t/) and [here](#http://web.archive.org/web/20150405114023/http://ie.microsoft.com/testdrive/HTML5/DOMContentLoaded/Default.html)
+  * Demo [here](http://jsfiddle.net/9L75t/) and [here](http://web.archive.org/web/20150405114023/http://ie.microsoft.com/testdrive/HTML5/DOMContentLoaded/Default.html)
 * What is the difference between `==` and `===`?
 * Explain the same-origin policy with regards to JavaScript.
 * Make this work:
