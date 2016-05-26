@@ -106,7 +106,6 @@ This file contains a number of front-end interview questions that can be used wh
   * [More Info](#https://davidwalsh.name/event-delegate)
 * Explain how `this` works in JavaScript
   * `this` refers to the context of the current execution
-  * 
 * Explain how prototypal inheritance works
 * What do you think of AMD vs CommonJS?
 * Explain why the following doesn't work as an IIFE: `function foo(){ }();`.
@@ -151,6 +150,13 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 ```
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
 * What is `"use strict";`? what are the advantages and disadvantages to using it?
+  * Advantages:
+  * i) It will catch common coding errors, which will throw exceptions.
+  * ii) When vulnerable actions are performed, it throws errors.
+  * iii) It will show,let us know and disable the features that are poorly coded.
+  * Disadvantages:
+  * i) It will not allow us to use the “with” statement. This statement will causes security and performance problems.
+  * ii) It will not allow us to use the “arguments.caller” property, due to security concernsWe do not have an alternate to this property, but we can hard code an additional parameter. #### because of this reason Enyo doesn't use 'use strict' in thier framework
 * Create a for loop that iterates up to `100` while outputting **"fizz"** at multiples of `3`, **"buzz"** at multiples of `5` and **"fizzbuzz"** at multiples of `3` and `5`
 * Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
 * Why would you use something like the `load` event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
