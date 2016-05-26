@@ -224,6 +224,10 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 ```javascript
 var foo = 10 + '20';
 ```
+*Answer:*
+```javascript
+'1020'  // Number will be converted to string and concatenated
+```
 
 *Question: How would you make this work?*
 ```javascript
@@ -231,14 +235,50 @@ add(2, 5); // 7
 add(2)(5); // 7
 ```
 
+*Answer:*
+```javascript
+// Use function currying
+function add(a,b,c) {
+
+  if (a == undefined && b == undefined && c == undefined) {
+    return add;
+  }
+  else if (b == undefined && c == undefined) {
+    return function(b, c) {
+      return add(a,b,c);
+    }
+  }
+  else if (c == undefined) {
+    return function(c) {
+      return add(a,b,c);
+    }
+  }
+  else {
+    return (a+b+c);
+  }
+}
+var f1 = add();
+console.log(f1(2)()()()(3) ()()(6));        // 11
+```
+
 *Question: What value is returned from the following statement?*
 ```javascript
 "i'm a lasagna hog".split("").reverse().join("");
 ```
 
+*Answer:*
+```javascript
+"goh angasal a m'i"
+```
+
 *Question: What is the value of `window.foo`?*
 ```javascript
 ( window.foo || ( window.foo = "bar" ) );
+```
+
+*Answer:*
+```javascript
+"bar"
 ```
 
 *Question: What is the outcome of the two alerts below?*
@@ -251,11 +291,26 @@ var foo = "Hello";
 alert(foo + bar);
 ```
 
+*Answer:*
+```javascript
+var foo = "Hello";
+(function() {
+  var bar = " World";
+  alert(foo + bar);         // Displays "Hello World"
+})();
+alert(foo + bar);           // Alert doesn't show up. Throws ReferenceError: bar is not defined
+```
+
 *Question: What is the value of `foo.length`?*
 ```javascript
 var foo = [];
 foo.push(1);
 foo.push(2);
+```
+
+*Answer:*
+```javascript
+2
 ```
 
 *Question: What is the value of `foo.x`?*
@@ -265,6 +320,13 @@ var bar = foo;
 foo.x = foo = {n: 2};
 ```
 
+*Answer:*
+```javascript
+undefined
+// detailed explanation can be found here:
+// http://raajkumar-s.github.io/topics/interview/tricky.html
+```
+
 *Question: What does the following code print?*
 ```javascript
 console.log('one');
@@ -272,6 +334,16 @@ setTimeout(function() {
   console.log('two');
 }, 0);
 console.log('three');
+```
+
+*Answer:*
+```javascript
+'one'
+'three'
+'two'       
+// Asynchrnous callbacks in JavaScript will be executed only after the current 'call stack' finishes it's execution
+// For more info: https://www.youtube.com/watch?v=8aGhZQkoFbQ
+// and latentflip.com/loupe/
 ```
 
 #### Fun Questions:
