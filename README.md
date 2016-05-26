@@ -116,6 +116,16 @@ This file contains a number of front-end interview questions that can be used wh
 * What's a typical use case for anonymous functions?
 * How do you organize your code? (module pattern, classical inheritance?)
 * What's the difference between host objects and native objects?
+  * Native Objects:
+    * These are defined in ECMA Standards
+    * Works same in all JS Runtimes (environments like browser, node, rhino etc)
+    * APIs are also standardised
+  *  Host Objects:
+    *  Host means environment where the object lives
+    *  Browser has host objects like window, document etc (DOM and BOM)
+    *  Node doesn't have DOM and BOM instead it has global modules like fs, http etc.,
+  *  User Objects:
+    * Objects which are created by users 
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
   *  #### Answers:
   *  `function Person(){}` - Declares a constructor function
@@ -132,6 +142,9 @@ This file contains a number of front-end interview questions that can be used wh
   * #### Answer
   * To overwrite the existing content of the page
 * What's the difference between feature detection, feature inference, and using the UA string?
+  * Feature Detection: Checking if the feature `x` actually exists
+  * Feature Inference: Assuming that if feature `x` exists, then feature `y` should also be available for usage
+  * UA(User Agent) String: Checking the browser/OS version from UA and hardcode the implementation for specific browser/OS
 * Explain Ajax in as much detail as possible.
 * What are the advantages and disadvantages of using Ajax?
 * Explain how JSONP works (and how it's not really Ajax).
@@ -140,8 +153,11 @@ This file contains a number of front-end interview questions that can be used wh
 * Explain "hoisting".
 * Describe event bubbling.
 * What's the difference between an "attribute" and a "property"?
+  * ### Answer [here](#http://stackoverflow.com/a/5884994)
 * Why is extending built-in JavaScript objects not a good idea?
 * Difference between document load event and document DOMContentLoaded event?
+  * DOMContentLoaded - Fired as soon as the DOM hierarchy has been fully constructed,    * load - Fired when all the images and sub-frames have finished loading.
+  * Demo [here](#http://jsfiddle.net/9L75t/) and [here](#http://web.archive.org/web/20150405114023/http://ie.microsoft.com/testdrive/HTML5/DOMContentLoaded/Default.html)
 * What is the difference between `==` and `===`?
 * Explain the same-origin policy with regards to JavaScript.
 * Make this work:
